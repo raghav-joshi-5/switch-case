@@ -1,0 +1,28 @@
+<h3 class="text-white text-center text-capitalize">tab with using ngFor</h3>
+<ul class="nav nav-pills justify-content-center mb-3">
+  <li
+    (click)="selectedskill = tab.skillName"
+    class="nav-item"
+    *ngFor="let tab of tabArray"
+  >
+    <a
+      [ngClass]="{
+        active: selectedskill.toLowerCase().includes(tab.skillName)
+      }"
+      href="javascript:;"
+      class="nav-link"
+      >{{ tab.skillName }}</a
+    >
+  </li>
+</ul>
+
+<ng-container *ngFor="let tab of tabArray">
+  <div
+    *ngIf="selectedskill.toLowerCase().includes(tab.skillName)"
+    class="card mb-3"
+  >
+    <div class="card-body" [innerHTML]="tab.tabContent">
+      <strong>{{ tab.skillName }}</strong>
+    </div>
+  </div>
+</ng-container>

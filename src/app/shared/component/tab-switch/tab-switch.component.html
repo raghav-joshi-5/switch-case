@@ -1,0 +1,93 @@
+<!-- <p *ngIf="val == 5">the value is 5</p>
+<p *ngIf="val == 10">the value is 10</p>
+<p *ngIf="val == 15">the value is 15</p>
+<p *ngIf="val != 5 && val != 10 && val != 15">the value is apart from  5,10 and 15</p> -->
+
+<!-- <div [ngSwitch]="val">
+  <p *ngSwitchCase="5">the value is 5</p>
+  <p *ngSwitchCase="10">the value is 10</p>
+  <p *ngSwitchCase="15">the value is 15</p>
+  <p *ngSwitchDefault>the value is apart from 5 ,10 and 15</p>
+</div> -->
+<h3 class="text-white text-center text-capitalize">tab without using ngFor</h3>
+<ul class="nav nav-pills mb-4 justify-content-center">
+  <li (click)="selectedskill = 'html'" class="nav-item">
+    <a
+      [ngClass]="{ active: selectedskill.toLowerCase().includes('html') }"
+      href="javascript:;"
+      class="nav-link"
+    >
+      HTML
+    </a>
+  </li>
+  <li (click)="selectedskill = 'css'" class="nav-item">
+    <a
+      [ngClass]="{ active: selectedskill.toLowerCase().includes('css') }"
+      href="javascript:;"
+      class="nav-link"
+    >
+      CSS
+    </a>
+  </li>
+  <li (click)="selectedskill = 'javascript'" class="nav-item">
+    <a
+      [ngClass]="{ active: selectedskill.toLowerCase().includes('javascript') }"
+      href="javascript:;"
+      class="nav-link"
+    >
+      JAVASCRIPT
+    </a>
+  </li>
+  <li (click)="selectedskill = 'angular'" class="nav-item">
+    <a
+      [ngClass]="{ active: selectedskill.toLowerCase().includes('angular') }"
+      href="javascript:;"
+      class="nav-link"
+    >
+      ANGULAR
+    </a>
+  </li>
+</ul>
+
+<div [ngSwitch]="selectedskill">
+  <div *ngSwitchCase="'html'" class="card mb-2">
+    <div class="card-body">
+      <p class="alert alert-primary">
+        <strong>HTML</strong> Lorem ipsum dolor, sit amet consectetur
+        adipisicing elit. Laudantium dolor unde architecto, animi tenetur
+        molestias explicabo iste iure omnis ratione quibusdam numquam, culpa
+        beatae quidem!
+      </p>
+    </div>
+  </div>
+  <div *ngSwitchCase="'css'" class="card mb-2">
+    <div class="card-body">
+      <p class="alert alert-primary">
+        <strong>css</strong> Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Laudantium dolor unde architecto, animi tenetur molestias
+        explicabo iste iure omnis ratione quibusdam numquam, culpa beatae
+        quidem!
+      </p>
+    </div>
+  </div>
+  <div *ngSwitchCase="'javascript'" class="card mb-2">
+    <div class="card-body">
+      <p class="alert alert-primary">
+        <strong>javascript</strong> Lorem ipsum dolor, sit amet consectetur
+        adipisicing elit. Laudantium dolor unde architecto, animi tenetur
+        molestias explicabo iste iure omnis ratione quibusdam numquam, culpa
+        beatae quidem!
+      </p>
+    </div>
+  </div>
+  <div *ngSwitchCase="'angular'" class="card mb-2">
+    <div class="card-body">
+      <p class="alert alert-primary">
+        <strong>angular 14</strong> Lorem ipsum dolor, sit amet consectetur
+        adipisicing elit. Laudantium dolor unde architecto, animi tenetur
+        molestias explicabo iste iure omnis ratione quibusdam numquam, culpa
+        beatae quidem!
+      </p>
+    </div>
+  </div>
+</div>
